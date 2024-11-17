@@ -1,17 +1,30 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { useState } from "react";
+import ReactDOM from "react-dom/client"
+import App from "./App"
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+const root=ReactDOM.createRoot(document.getElementById("root"));
+
+root.render(<App></App>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// var myname ="Nishaa";
+
+// function ChangeName(){
+//   var [myname,setmyname]= useState("Nisha")
+
+//   function Change(){
+//   setmyname("Nisha Change");
+   
+//   }
+
+//   return(
+//     <div>
+//       <h1>{myname}</h1>
+//       <button onClick={Change}>Change</button>
+//     </div>
+//   )
+// }
+
+// root.render(
+//   <ChangeName></ChangeName>
+// )

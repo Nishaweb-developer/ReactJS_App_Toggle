@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import Counter from "./counter"
+import { useState } from "react"
+import Random from "./random"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+function App(){
+ 
+   
+
+  var [counter,SetCounterIsActive] = useState(true);
+
+  function CounterActive(){
+    SetCounterIsActive(true);
+       
+    }
+
+    function RandomActive(){
+      SetCounterIsActive(false);
+      
+    }
+  
+
+return(
+  <div className="screen">
+<div className="container_app">
+  <button className="counter_view"  onClick={CounterActive}>Show Counter</button>
+  <button className="random_view" onClick={RandomActive}>Show Random</button>
+  </div>
+   <div>{counter ? <Counter /> : <Random />}</div>
+
+</div>
+
+  )
 }
 
-export default App;
+export default App
